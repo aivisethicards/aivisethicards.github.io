@@ -1,0 +1,22 @@
+---
+layout: base
+---
+
+<body class="page">
+  <div class="wrapper">
+    <header>
+      <h1 class="sc-head">
+        <a href="/"> Data<br />Comics<br /> </a>
+        <span class="page-title">{{ page.title }}</span>
+      </h1>
+      {% include nav.html %}
+    </header>
+    <section class="markdown-dest">
+      {{ content }}
+    </section>
+    <footer>
+      {% include logo-s.html %}
+      <p><small>Copyright &copy; 2020 Data Comics.</small></p>
+    </footer>
+  </div>
+</body>
