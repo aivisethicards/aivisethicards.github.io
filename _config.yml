@@ -1,6 +1,6 @@
 theme: jekyll-theme-minimal
-title: "Data Comics for Reporting Studies"
-description: "Making papers and other scientific reports easier to read"
+title: "AI-VIS EthiCards"
+description: "Engage Exploring Ethics in AI for Data Visualization"
 relative_links:
   enabled: true
   collections: true
