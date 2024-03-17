@@ -308,12 +308,12 @@ body.showcase {
 
 
   .left-sidebar-content {
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 90px;
-  }
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px; /* Adjust the padding to your preference */
+    justify-content: flex-start;
+}
 
   .logos {
     filter: grayscale(1);
@@ -356,7 +356,8 @@ body.showcase {
   }
 
   .cbc-outer {
-    transform: translateX(-50%);
+    position: relative; /* Make it relative to position .home-cards absolutely inside it */
+    left: 0; /* Remove the negative translate */
   }
 
   .cbc-inner {
@@ -366,11 +367,12 @@ body.showcase {
   }
 
   .home-cards {
-    background-size: contain;
-    background-blend-mode: normal;
-    height: 135vh;
-    width: 90vh;
-    transform-origin: 100% 100%;
+    background-size: cover; /* This will ensure that the background covers the entire div */
+    width: 100%; /* Stretch to the full width of its container */
+    height: auto; /* Maintain the aspect ratio */
+    position: absolute; /* Position it absolutely within the container */
+    top: 0;
+    left: 0;
   }
 
   /* Add the new styles here */
