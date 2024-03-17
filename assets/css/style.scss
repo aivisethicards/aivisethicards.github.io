@@ -366,13 +366,14 @@ body.showcase {
     align-items: center;
   }
 
-  .home-cards {
-    background-size: contain; /* This will make sure the entire image is visible */
-    background-position: center center; /* This will center the image in the div */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    width: 100%; /* Adjust the width as needed, but ensure it's within the container */
-    height: auto; /* Adjust the height as needed */
-    position: relative; /* If you use absolute positioning, make sure it's positioned within a container that has relative positioning */
+  {
+    background-size: cover; /* Use 'cover' to make sure the image covers the entire element */
+    background-position: center; /* Center the image */
+    width: 105vw; /* Set the width to the full viewport width */
+    height: 105vh; /* Set the height to a suitable size, such as the full viewport height */
+    /* You can adjust the above height if it's too tall for your design, 
+       or you could use a percentage of the viewport height like 80vh */
+    position: relative; /* Ensure that it's positioned within its parent element */
 }
 
   /* Add the new styles here */
