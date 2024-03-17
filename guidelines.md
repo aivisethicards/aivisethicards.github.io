@@ -43,4 +43,6 @@ Participants combine Challenge Cards, Technology Cards, and AI-VIS Task Cards to
 This activity differs from other activities by focusing on the application of the Ethical Principles Card(s), which participants select as the most relevant to the identified challenge. The ensuing discussion centers on the pragmatic application of these principles, as participants deliberate on actionable solutions and strategies to navigate the ethical challenge. This process is enriched by group dialogues or feedback sessions, where insights are shared, and ethical reasoning is collaboratively refined.
 It is designed to promote ethical decision-making skills that extend beyond theoretical analysis, focusing on the practical and educational aspects of ethics. 
 
+_This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike International 4.0 License._
+
 <!-- prettier-ignore-end -->
