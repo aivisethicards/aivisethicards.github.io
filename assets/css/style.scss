@@ -373,8 +373,8 @@ body.showcase {
     height: auto; /* 100% of the viewport height, you can also adjust this as needed */
     position: absolute; 
     right: 0; /* Align to the right, you can add some pixels or percentages to move it to the left */
-    top: 10%; /* Centered vertically */
-    transform: translate(-49%, -50%); /* Adjust the translate value to bring the image towards the center */
+    top: 0%; /* Centered vertically */
+    transform: translate(-50%, -50%); /* Adjust the translate value to bring the image towards the center */
     max-width: none;  
 }
 
