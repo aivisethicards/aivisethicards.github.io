@@ -5,7 +5,8 @@ title: Guidelines
 
 <!-- prettier-ignore-start -->
 
-<div class="note">This page is for workshop-related usages.</div>
+<div class="note"><a href="/AI-VIS-EthiCards.zip" download="AI-VIS-EthiCards.zip">Download</a> the full card set.
+</div>
 
 # Activities with AI-VIS EthiCards
 
