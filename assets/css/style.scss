@@ -372,12 +372,11 @@ body.showcase {
     background-position: center right;
     background-repeat: no-repeat;
     width: 100vw;
-    height: auto;
+    height: 100vh; /* Set a specific height to ensure that the element has dimensions */
     position: absolute;
-    right: 0;
-    top: 0%;
+    top: 50%;
     left: 50%;
-    transform: translate(-20%, -3%);
+    transform: translate(-50%, -50%); /* Center the element on the page */
     overflow: visible;
  }
 
