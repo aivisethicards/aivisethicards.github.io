@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Gallery
+title: Cards
 ---
 
 <div class="exhibs not-markdown-area">
