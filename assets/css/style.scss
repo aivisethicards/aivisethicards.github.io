@@ -306,18 +306,9 @@ body.showcase {
     max-width: 1100px;
   }
 
-  .container {
-    display: flex;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .left-sidebar-content {
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 90px;
+    .left-sidebar-content {
+    padding: 0; /* Remove padding */
+    height: auto; /* Remove fixed height */
   }
 
   .logos {
@@ -371,24 +362,22 @@ body.showcase {
   }
 
   .home-cards {
-    background-size: contain;
-    background-blend-mode: normal;
-    height: 135vh;
-    width: 90vh;
-    transform-origin: 100% 100%;
+    width: 100vw; /* Make image take full width */
+    max-width: none; /* Remove maximum width constraint */
+    height: auto; /* Adjust height based on aspect ratio */
+    margin-top: -2rem; /* Add some spacing between text and image */
   }
 
   /* Add the new styles here */
-  .container {
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.container {
+    justify-content: flex-start; /* Align content to the left */
+    align-items: flex-start; /* Align content to the top */
+    padding: 2rem; /* Add some padding */
   }
 
   .content-wrapper {
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;
+    flex-direction: column; /* Stack text and image vertically */
+    align-items: flex-start; /* Align text to the left */
   }
 
   .cbc-outer {
