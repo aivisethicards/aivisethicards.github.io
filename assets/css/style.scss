@@ -351,9 +351,10 @@ body.showcase {
 
   .cbc-outer {
     position: absolute;
-    left: 100%;
+    left: 50%;
     bottom: 0px;
     z-index: -1;
+    transform: translateX(-50%);
   }
 
   // .comic-banner {
@@ -370,7 +371,6 @@ body.showcase {
     background-blend-mode: normal;
     height: 135vh;
     width: 90vh;
-    /* Remove rotation and adjust translation to center */
     transform: translate(-50%, -50%);
     transform-origin: center;
     position: absolute;
