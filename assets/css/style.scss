@@ -350,9 +350,14 @@ body.showcase {
   }
 
 
- .cbc-inner {
-  display: grid;
-  place-items: center;
+.cbc-outer {
+  transform: translateX(-50%);
+}
+
+.cbc-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .home-cards {
@@ -360,17 +365,8 @@ body.showcase {
   background-blend-mode: normal;
   height: 135vh;
   width: 90vh;
-  /* transform: rotate(-13deg) translateX(-30vw); */
   transform-origin: 100% 100%;
 }
-
-  // .cbc-outer {
-  //   position: absolute;
-  //   left: 50%;
-  //   bottom: 0px;
-  //   z-index: -1;
-  //   transform: translateX(-50%);
-  // }
 
   // .comic-banner {
   //   background-size: contain;
