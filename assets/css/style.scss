@@ -367,13 +367,15 @@ body.showcase {
   }
 
   .home-cards {
-    background-size: cover; /* Use 'cover' to make sure the image covers the entire element */
-    background-position: center; /* Center the image */
-    width: 135vw; /* Set the width to the full viewport width */
-    height: 135vh; /* Set the height to a suitable size, such as the full viewport height */
-    /* You can adjust the above height if it's too tall for your design, 
-       or you could use a percentage of the viewport height like 80vh */
-    position: relative; /* Ensure that it's positioned within its parent element */
+    background-size: cover; /* This will cover the entire area of the div. You can use a percentage value greater than 100% to zoom in and make the image larger */
+    background-position: center right; /* Adjust this to move the image to the right; you can use percentage values for fine-tuning */
+    width: 100vw; /* Use viewport widths (vw) to make the image wider */
+    height: 100vh; /* Use viewport heights (vh) to make the image taller */
+    position: absolute; /* Make sure it's positioned in relation to its parent element */
+    right: 0; /* Align the image to the right */
+    top: 50%; /* Align the image vertically in the middle */
+    transform: translate(50%, -50%); /* Adjust this to fine-tune the image's position; positive values will move it to the right and up */
+    max-width: none; 
 }
 
   /* Add the new styles here */
@@ -390,7 +392,7 @@ body.showcase {
   }
 
   .cbc-outer {
-    flex: 1;
+    position: relative;
   }
 
   .home-cards {
