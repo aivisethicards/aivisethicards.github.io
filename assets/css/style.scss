@@ -367,13 +367,13 @@ body.showcase {
   }
 
   .home-cards {
-    background-size: cover; /* This will ensure that the background covers the entire div */
-    width: 100%; /* Stretch to the full width of its container */
-    height: auto; /* Maintain the aspect ratio */
-    position: absolute; /* Position it absolutely within the container */
-    top: 0;
-    left: 0;
-  }
+    background-size: contain; /* This will make sure the entire image is visible */
+    background-position: center center; /* This will center the image in the div */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    width: 100%; /* Adjust the width as needed, but ensure it's within the container */
+    height: auto; /* Adjust the height as needed */
+    position: relative; /* If you use absolute positioning, make sure it's positioned within a container that has relative positioning */
+}
 
   /* Add the new styles here */
   .container {
