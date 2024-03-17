@@ -367,15 +367,15 @@ body.showcase {
   }
 
   .home-cards {
-    background-size: cover; /* This will cover the entire area of the div. You can use a percentage value greater than 100% to zoom in and make the image larger */
-    background-position: center right; /* Adjust this to move the image to the right; you can use percentage values for fine-tuning */
-    width: 100vw; /* Use viewport widths (vw) to make the image wider */
-    height: 100vh; /* Use viewport heights (vh) to make the image taller */
-    position: absolute; /* Make sure it's positioned in relation to its parent element */
-    right: 0; /* Align the image to the right */
-    top: 50%; /* Align the image vertically in the middle */
-    transform: translate(50%, -50%); /* Adjust this to fine-tune the image's position; positive values will move it to the right and up */
-    max-width: none; 
+    background-size: cover; /* or use a specific size, like '120%' to make it larger than its container */
+    background-position: right center; /* adjust this to move the image more to the center from the right */
+    width: 100vw; /* 100% of the viewport width */
+    height: 100vh; /* 100% of the viewport height, you can also adjust this as needed */
+    position: absolute; 
+    right: 0; /* Align to the right, you can add some pixels or percentages to move it to the left */
+    top: 50%; /* Centered vertically */
+    transform: translate(-50%, -50%); /* Adjust the translate value to bring the image towards the center */
+    max-width: none;  
 }
 
   /* Add the new styles here */
