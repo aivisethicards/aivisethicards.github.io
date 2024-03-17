@@ -369,12 +369,10 @@ body.showcase {
   .home-cards {
     background-size: contain;
     background-blend-mode: normal;
-    position: absolute; /* This will position your element in relation to the nearest positioned ancestor or to the body if there isn't one */
-  top: 0; /* This positions the top edge of the element at the top edge of the parent */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90vh; /* Adjust the width if needed */
-  height: auto; /* Adjust the height if needed */
+    height: 135vh;
+    width: 90vh;
+    // transform: rotate(-13deg) translateX(-30vw);
+    transform-origin: 100% 100%;
   }
   
 
