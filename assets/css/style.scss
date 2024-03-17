@@ -354,10 +354,10 @@ body.showcase {
       transform: translateX(4px);
     }
   }
-  .cbc-outer {
-    position: relative; /* Make it relative to position .home-cards absolutely inside it */
-    left: 0; /* Remove the negative translate */
-  }
+  // .cbc-outer {
+  //   position: relative; /* Make it relative to position .home-cards absolutely inside it */
+  //   left: 0; /* Remove the negative translate */
+  // }
 
   .cbc-inner {
     display: flex;
@@ -367,7 +367,7 @@ body.showcase {
   }
 
   .home-cards {
-    background-size: 140%; /* or use a specific size, like '120%' to make it larger than its container */
+    background-size: 138%; /* or use a specific size, like '120%' to make it larger than its container */
    background-position: center right; 
    background-repeat: no-repeat;
     width: 100vw; /* 100% of the viewport width */
@@ -379,6 +379,12 @@ body.showcase {
    transform: translate(-20%, -3%); /* Offset the container by half its width and height to truly center it */
     overflow: visible; /* Make sure any oversized content is not clipped */
 }
+   .home-cards {
+    height: 80vh;
+    width: 80vw;
+    max-width: 1000px;
+    max-height: 800px;
+  }
 
   /* Add the new styles here */
   .container {
@@ -402,7 +408,6 @@ body.showcase {
   }
 
   .home-cards {
-    background-repeat: no-repeat;
     height: 80vh;
     width: 80vw;
     max-width: 1000px;
