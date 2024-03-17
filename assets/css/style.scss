@@ -356,14 +356,28 @@ body.showcase {
     z-index: -1;
   }
 
-  .comic-banner {
+  // .comic-banner {
+  //   background-size: contain;
+  //   background-blend-mode: multiply;
+  //   height: 135vh;
+  //   width: 90vh;
+  //   transform: rotate(-13deg) translateX(-30vw);
+  //   transform-origin: 100% 100%;
+  // }
+
+  .home-cards {
     background-size: contain;
-    background-blend-mode: multiply;
+    background-blend-mode: normal;
     height: 135vh;
     width: 90vh;
-    transform: rotate(-13deg) translateX(-30vw);
-    transform-origin: 100% 100%;
+    /* Remove rotation and adjust translation to center */
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
   }
+  
 
   @media print, screen and (max-width: 920px) {
     .left-sidebar-content {
@@ -383,8 +397,8 @@ body.showcase {
       margin-right: 2px;
     }
 
-    .comic-banner {
-      transform: translateX(-6vw) rotate(-10deg);
+    .home-cards {
+      transform: translate(-50%, -50%);
     }
   }
 }
