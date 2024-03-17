@@ -288,14 +288,15 @@ body.gallery {
 /*
  ================ SHOWCASE STYLES
 */
-
 body.showcase {
   margin: 0;
   padding: 0;
-  background-image: url("../img/noise-2.png");
+  background-image: url("../img/noise.png");
+
   * {
     box-sizing: border-box;
   }
+
   .sc-huge-title {
     font-size: 68px;
     font-weight: 800;
@@ -304,11 +305,13 @@ body.showcase {
     margin-bottom: 18px;
     max-width: 1100px;
   }
+
   .container {
     display: flex;
     position: relative;
     overflow: hidden;
   }
+
   .left-sidebar-content {
     display: flex;
     height: 100vh;
@@ -316,78 +319,89 @@ body.showcase {
     justify-content: space-between;
     padding: 90px;
   }
+
   .logos {
     filter: grayscale(1);
+
     a {
       margin-right: 20px;
     }
+
     img {
       height: 40px;
     }
   }
+
   .text-group p {
     font-size: 33px;
     max-width: 1000px;
     line-height: 1.1;
   }
+
   .navigation {
     color: #aaa;
     margin-top: 50px;
   }
+
   .single-nav {
     text-transform: uppercase;
     margin-right: 20px;
     letter-spacing: 1px;
+
     &:after {
       content: "→";
       display: inline-block;
       margin-left: 3px;
       transition: all 0.2s;
     }
+
     &:hover:after {
       transform: translateX(4px);
     }
   }
 
+  .cbc-outer {
+    transform: translateX(-50%);
+  }
 
-.cbc-outer {
-  transform: translateX(-50%);
-}
+  .cbc-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.cbc-inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .home-cards {
+    background-size: contain;
+    background-blend-mode: normal;
+    height: 135vh;
+    width: 90vh;
+    transform-origin: 100% 100%;
+  }
 
-.home-cards {
-  background-size: contain;
-  background-blend-mode: normal;
-  height: 135vh;
-  width: 90vh;
-  transform-origin: 100% 100%;
-}
+  /* Add the new styles here */
+  .container {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
 
-  // .comic-banner {
-  //   background-size: contain;
-  //   background-blend-mode: multiply;
-  //   height: 135vh;
-  //   width: 90vh;
-  //   transform: rotate(-13deg) translateX(-30vw);
-  //   transform-origin: 100% 100%;
-  // }
+  .content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+  }
 
+  .cbc-outer {
+    flex: 1;
+  }
 
-//  .home-cards {
-//   background-size: contain;
-//   background-blend-mode: normal;
-//   height: 135vh;
-//   width: 90vh;
-//   /* transform: rotate(-13deg) translateX(-30vw); */
-//   transform-origin: 100% 100%;
-//   display: grid;
-//   place-items: center;
-// }
+  .home-cards {
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 80vw;
+    max-width: 1000px;
+    max-height: 800px;
+  }
 
   @media print, screen and (max-width: 920px) {
     .left-sidebar-content {
