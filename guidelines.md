@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Guidelines
+title: Use Guide
 ---
 
 <!-- prettier-ignore-start -->
