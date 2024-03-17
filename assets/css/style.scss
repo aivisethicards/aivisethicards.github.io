@@ -367,22 +367,25 @@ body.showcase {
   }
 
   .home-cards {
-    background-size: 150%; /* or use a specific size, like '120%' to make it larger than its container */
-    background-position: right center; /* adjust this to move the image more to the center from the right */
+    background-size: 130%; /* or use a specific size, like '120%' to make it larger than its container */
+   background-position: center center; 
+   background-repeat: no-repeat;
     width: 100vw; /* 100% of the viewport width */
     height: auto; /* 100% of the viewport height, you can also adjust this as needed */
     position: absolute; 
     right: 0; /* Align to the right, you can add some pixels or percentages to move it to the left */
     top: 0%; /* Centered vertically */
-    transform: translate(-10%, -1%); /* Adjust the translate value to bring the image towards the center */
-    max-width: none;  
+    left: 50%;
+   transform: translate(-50%, -50%); /* Offset the container by half its width and height to truly center it */
+    overflow: visible; /* Make sure any oversized content is not clipped */
 }
 
   /* Add the new styles here */
   .container {
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    width: 100%;
     height: 100vh;
+   overflow: visible;
   }
 
   .content-wrapper {
@@ -393,6 +396,9 @@ body.showcase {
 
   .cbc-outer {
     position: relative;
+   overflow: visible; /* Ensure it allows the child .home-cards to overflow without clipping */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
   }
 
   .home-cards {
