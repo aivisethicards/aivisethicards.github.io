@@ -291,7 +291,7 @@ body.gallery {
 body.showcase {
   margin: 0;
   padding: 0;
-  background-image: url("../img/noise.png");
+  background-image: url("../img/noise-2.png");
 
   * {
     box-sizing: border-box;
@@ -306,9 +306,13 @@ body.showcase {
     max-width: 1100px;
   }
 
-    .left-sidebar-content {
-    padding: 0; /* Remove padding */
-    height: auto; /* Remove fixed height */
+
+  .left-sidebar-content {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 90px;
   }
 
   .logos {
@@ -362,22 +366,24 @@ body.showcase {
   }
 
   .home-cards {
-    width: 100vw; /* Make image take full width */
-    max-width: none; /* Remove maximum width constraint */
-    height: auto; /* Adjust height based on aspect ratio */
-    margin-top: -2rem; /* Add some spacing between text and image */
+    background-size: contain;
+    background-blend-mode: normal;
+    height: 135vh;
+    width: 90vh;
+    transform-origin: 100% 100%;
   }
 
   /* Add the new styles here */
-.container {
-    justify-content: flex-start; /* Align content to the left */
-    align-items: flex-start; /* Align content to the top */
-    padding: 2rem; /* Add some padding */
+  .container {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
 
   .content-wrapper {
-    flex-direction: column; /* Stack text and image vertically */
-    align-items: flex-start; /* Align text to the left */
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
   }
 
   .cbc-outer {
