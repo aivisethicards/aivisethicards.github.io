@@ -369,7 +369,7 @@ body.showcase {
 
   .home-cards {
     background-size: contain; /* Change to 'contain' to ensure the image fits within the container */
-    background-position: center; /* Center the image within the container */
+    background-position: center center; /* Center the image within the container */
     background-repeat: no-repeat;
     width: 100vw; /* Full width of the viewport */
     height: auto; /* Height is auto to maintain aspect ratio */
