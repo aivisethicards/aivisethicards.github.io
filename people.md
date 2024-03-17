@@ -1,4 +1,4 @@
 ---
 layout: people
-title: People
+title: About Us
 ---
