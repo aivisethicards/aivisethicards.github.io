@@ -368,17 +368,18 @@ body.showcase {
   }
 
   .home-cards {
-    background-size: 140%;
-    background-position: center right;
+    background-size: contain; /* Change to 'contain' to ensure the image fits within the container */
+    background-position: center; /* Center the image within the container */
     background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh; /* Set a specific height to ensure that the element has dimensions */
+    width: 100vw; /* Full width of the viewport */
+    height: auto; /* Height is auto to maintain aspect ratio */
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the element on the page */
-    overflow: visible;
- }
+    top: 50%; /* Center vertically in the viewport */
+    left: 50%; /* Center horizontally in the viewport */
+    transform: translate(-50%, -50%); /* Center the element using a negative translate */
+    overflow: visible; /* Ensure that the image is not clipped */
+}
+
 
   /* Add the new styles here */
   .container {
