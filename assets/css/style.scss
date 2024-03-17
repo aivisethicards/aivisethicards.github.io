@@ -349,13 +349,28 @@ body.showcase {
     }
   }
 
-  .cbc-outer {
-    position: absolute;
-    left: 50%;
-    bottom: 0px;
-    z-index: -1;
-    transform: translateX(-50%);
-  }
+
+ .cbc-inner {
+  display: grid;
+  place-items: center;
+}
+
+.home-cards {
+  background-size: contain;
+  background-blend-mode: normal;
+  height: 135vh;
+  width: 90vh;
+  /* transform: rotate(-13deg) translateX(-30vw); */
+  transform-origin: 100% 100%;
+}
+
+  // .cbc-outer {
+  //   position: absolute;
+  //   left: 50%;
+  //   bottom: 0px;
+  //   z-index: -1;
+  //   transform: translateX(-50%);
+  // }
 
   // .comic-banner {
   //   background-size: contain;
@@ -366,25 +381,17 @@ body.showcase {
   //   transform-origin: 100% 100%;
   // }
 
-  // .home-cards {
-  //   background-size: contain;
-  //   background-blend-mode: normal;
-  //   height: 135vh;
-  //   width: 90vh;
-  //   // transform: rotate(-13deg) translateX(-30vw);
-  //   transform-origin: 100% 100%;
-  // }
 
- .home-cards {
-  background-size: contain;
-  background-blend-mode: normal;
-  height: 135vh;
-  width: 90vh;
-  /* transform: rotate(-13deg) translateX(-30vw); */
-  transform-origin: 100% 100%;
-  display: grid;
-  place-items: center;
-}
+//  .home-cards {
+//   background-size: contain;
+//   background-blend-mode: normal;
+//   height: 135vh;
+//   width: 90vh;
+//   /* transform: rotate(-13deg) translateX(-30vw); */
+//   transform-origin: 100% 100%;
+//   display: grid;
+//   place-items: center;
+// }
 
   @media print, screen and (max-width: 920px) {
     .left-sidebar-content {
