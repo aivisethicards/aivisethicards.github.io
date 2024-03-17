@@ -369,7 +369,7 @@ body.showcase {
 
   .home-cards {
     background-size: 140%; /* or use a specific size, like '120%' to make it larger than its container */
-   background-position: center center; 
+   background-position: center right; 
    background-repeat: no-repeat;
     width: 100vw; /* 100% of the viewport width */
     height: auto; /* 100% of the viewport height, you can also adjust this as needed */
@@ -429,7 +429,7 @@ body.showcase {
     }
 
     .home-cards {
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, 0);
     }
   }
 }
