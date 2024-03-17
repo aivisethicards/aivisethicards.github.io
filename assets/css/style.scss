@@ -377,7 +377,7 @@ body.showcase {
     right: 0; /* Align to the right, you can add some pixels or percentages to move it to the left */
     top: 0%; /* Centered vertically */
     left: 50%;
-   transform: translate(-50%, -3%); /* Offset the container by half its width and height to truly center it */
+   transform: translate(-20%, -3%); /* Offset the container by half its width and height to truly center it */
     overflow: visible; /* Make sure any oversized content is not clipped */
 }
 
@@ -429,7 +429,7 @@ body.showcase {
     }
 
     .home-cards {
-      transform: translate(-50%, 0);
+      transform: translate(-50%, -50%);
     }
   }
 }
