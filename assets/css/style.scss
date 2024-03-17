@@ -355,10 +355,10 @@ body.showcase {
     }
   }
 
-  .cbc-outer {
-    position: relative; /* Make it relative to position .home-cards absolutely inside it */
-    left: 0; /* Remove the negative translate */
-  }
+  // .cbc-outer {
+  //   position: relative; /* Make it relative to position .home-cards absolutely inside it */
+  //   left: 0; /* Remove the negative translate */
+  // }
 
   .cbc-inner {
     display: flex;
@@ -402,13 +402,13 @@ body.showcase {
     height: 100%; /* Full height */
   }
 
-  .home-cards {
-    background-repeat: no-repeat;
-    height: 80vh;
-    width: 80vw;
-    max-width: 1000px;
-    max-height: 800px;
-  }
+  // .home-cards {
+  //   background-repeat: no-repeat;
+  //   height: 80vh;
+  //   width: 80vw;
+  //   max-width: 1000px;
+  //   max-height: 800px;
+  // }
 
   @media print, screen and (max-width: 920px) {
     .left-sidebar-content {
@@ -428,9 +428,9 @@ body.showcase {
       margin-right: 2px;
     }
 
-    // .home-cards {
-    //   transform: translate(-50%, -50%);
-    // }
+    .home-cards {
+      transform: translate(-50%, -20%);
+    }
   }
 }
 
