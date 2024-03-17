@@ -1,4 +1,7 @@
---- --- $paper: #f8f5eb;
+---
+---
+
+$paper: #f8f5eb;
 $coal: #333;
 $primary: #f0c40f;
 $primary-highlight: rgba($primary, 0.5);
@@ -44,8 +47,7 @@ h1.variable {
   letter-spacing: -1px;
 }
 
-@media print,
-screen and (max-width: 640px) {
+@media print, screen and (max-width: 640px) {
   h1.variable {
     font-size: 35px;
     letter-spacing: -0.5px;
@@ -56,7 +58,6 @@ screen and (max-width: 640px) {
   a {
     text-decoration: none;
     position: relative;
-
     &:after {
       content: "";
       position: absolute;
@@ -68,11 +69,9 @@ screen and (max-width: 640px) {
       transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
       background-color: $primary-highlight;
     }
-
     &:hover {
       opacity: 1;
     }
-
     &:hover:after {
       top: 0%;
     }
@@ -115,7 +114,6 @@ body.gallery {
     margin-top: 0;
     margin-bottom: 15px;
     display: flex;
-
     a {
       margin-right: 30px;
     }
@@ -133,7 +131,6 @@ body.gallery {
   color: white;
   margin-bottom: 30px;
   transition: all 0.2s;
-
   &:hover {
     background: $primary;
   }
@@ -142,12 +139,10 @@ body.gallery {
 .exhib-img {
   margin-bottom: 30px;
   position: relative;
-
   img {
     width: 100%;
     display: block;
   }
-
   div {
     mix-blend-mode: multiply;
     position: absolute;
@@ -167,7 +162,6 @@ body.gallery {
 
 .exhib-text {
   flex: 1;
-
   h2,
   p {
     margin-bottom: 5px;
@@ -179,11 +173,9 @@ body.gallery {
   width: 200px;
   display: flex;
   justify-content: flex-end;
-
   a.exhib-button {
     text-decoration: none;
   }
-
   .exhib-button {
     display: block;
     width: 60px;
@@ -195,21 +187,17 @@ body.gallery {
     border: 3px solid white;
     color: white;
     margin-left: 15px;
-
     &:hover {
       opacity: 1;
       background: white;
       color: $primary;
     }
-
     h1 {
       margin: 0;
     }
-
     i {
       margin-bottom: 7px;
     }
-
     small {
       color: inherit;
       font-size: 10px;
@@ -227,28 +215,23 @@ body.gallery {
   * {
     transition: all 0.2s;
   }
-
   .single-p {
     text-decoration: none;
   }
 }
-
 .single-p {
   display: flex;
   margin-bottom: 30px;
 
   &:hover {
     opacity: 1;
-
     .intro {
       transform: translateX(10px);
     }
-
     .p-img.l {
       background-color: transparent;
     }
   }
-
   .r,
   .l,
   .intro {
@@ -280,27 +263,23 @@ body.gallery {
     z-index: -1;
   }
 }
-
 .intro {
   padding: 25px;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
   h1 {
     font-size: 25px;
     width: 150px;
     line-height: 1;
   }
-
   small {
     display: block;
   }
 }
 
-@media print,
-screen and (max-width: 640px) {
+@media print, screen and (max-width: 640px) {
   .single-p {
     flex-direction: column;
   }
@@ -314,11 +293,9 @@ body.showcase {
   margin: 0;
   padding: 0;
   background-image: url("../img/noise-2.png");
-
   * {
     box-sizing: border-box;
   }
-
   .sc-huge-title {
     font-size: 68px;
     font-weight: 800;
@@ -327,13 +304,11 @@ body.showcase {
     margin-bottom: 18px;
     max-width: 1100px;
   }
-
   .container {
     display: flex;
     position: relative;
     overflow: hidden;
   }
-
   .left-sidebar-content {
     display: flex;
     height: 100vh;
@@ -341,42 +316,34 @@ body.showcase {
     justify-content: space-between;
     padding: 90px;
   }
-
   .logos {
     filter: grayscale(1);
-
     a {
       margin-right: 20px;
     }
-
     img {
       height: 40px;
     }
   }
-
   .text-group p {
     font-size: 33px;
     max-width: 1000px;
     line-height: 1.1;
   }
-
   .navigation {
     color: #aaa;
     margin-top: 50px;
   }
-
   .single-nav {
     text-transform: uppercase;
     margin-right: 20px;
     letter-spacing: 1px;
-
     &:after {
       content: "→";
       display: inline-block;
       margin-left: 3px;
       transition: all 0.2s;
     }
-
     &:hover:after {
       transform: translateX(4px);
     }
@@ -399,21 +366,19 @@ body.showcase {
   //   transform-origin: 100% 100%;
   // }
 
-.home-cards {
-  background-size: contain;
-  background-blend-mode: normal;
-  height: 135vh;
-  width: 90vh;
-  transform: translate(-50%, -50%);
-  transform-origin: center;
-  position: absolute;
-  top: 50%;
+  .home-cards {
+    background-size: contain;
+    background-blend-mode: normal;
+    position: absolute; /* This will position your element in relation to the nearest positioned ancestor or to the body if there isn't one */
+  top: 0; /* This positions the top edge of the element at the top edge of the parent */
   left: 50%;
-}
+  transform: translateX(-50%);
+  width: 90vh; /* Adjust the width if needed */
+  height: auto; /* Adjust the height if needed */
+  }
+  
 
-
-  @media print,
-  screen and (max-width: 920px) {
+  @media print, screen and (max-width: 920px) {
     .left-sidebar-content {
       padding: 40px;
     }
@@ -460,33 +425,27 @@ body.page {
     color: #aaa;
     margin-top: 50px;
   }
-
   .single-nav {
     text-transform: uppercase;
     display: block;
     letter-spacing: 1px;
-
     &:after {
       content: "→";
       display: inline-block;
       margin-left: 3px;
       transition: all 0.2s;
     }
-
     &:hover:after {
       transform: translateX(4px);
     }
   }
-
   .logos {
     margin-bottom: 10px;
     filter: grayscale(1);
-
     a {
       margin-left: -5px;
       margin-right: 8px;
     }
-
     img {
       height: 40px;
     }
