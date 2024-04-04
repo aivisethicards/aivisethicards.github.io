@@ -9,7 +9,7 @@ title: Cards
     <input type="text" v-model="search" placeholder="Search cards by keywords"/>
         <label>Search title:</label>
   </div>
-  <div class="wrapper">
+  <div class="card-wrapper">
     <div class="card" v-for="post in filteredList" @click="zoomIn(post)">
       <img v-bind:src="post.img"/>
     </div>
