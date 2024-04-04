@@ -491,3 +491,154 @@ body.page {
     opacity: 0.99;
   }
 }
+
+/*
+ ================ CARDS STYLES
+*/
+
+html, body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.search-wrapper {
+  position: relative;
+}
+
+.search-wrapper label {
+  position: absolute;
+  font-size: 12px;
+  color: rgba(0,0,0,.50);
+  top: 8px;
+  left: 12px;
+  z-index: -1;
+  transition: .15s all ease-in-out;
+  font-family: 'Arial', sans-serif; /* Choose the font-family you prefer */
+}
+
+.search-wrapper input {
+  padding: 4px 12px;
+  color: rgba(0,0,0,.70);
+  border: 1px solid rgba(0,0,0,.12);
+  transition: .15s all ease-in-out;
+  background: white;
+  border-radius: 4px;
+}
+
+.search-wrapper input:focus {
+  outline: none;
+  transform: scale(1.05);
+}
+
+.search-wrapper input:focus + label {
+  font-size: 10px;
+  transform: translateY(-24px) translateX(-12px);
+}
+
+.search-wrapper input::-webkit-input-placeholder {
+  font-size: 12px;
+  color: rgba(0,0,0,.50);
+  font-weight: 100;
+}
+
+.wrapper {
+  display: flex;
+  max-width: 444px;
+  flex-wrap: wrap;
+  padding-top: 12px;
+}
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+  max-width: 124px;
+  margin: 12px;
+  border-radius: 10px;
+  transition: .15s all ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+.hotpink {
+  background: hotpink;
+}
+
+.green {
+  background: green;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgba(0,0,0,.12);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.zoomedCard {
+  position: relative;
+  max-width: 30%;
+  max-height: 100%;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.zoomedCard img {
+  width: 100%;
+  height: auto;
+}
+
+.closeButton {
+  position: absolute;
+  top: 4.58px;
+  right: 4.58px;
+  border: none;
+  background-color: #fff;
+  border-radius: 50%; /* Makes the element a circle */
+  width: 50px; /* Width of the button */
+  height: 50px; /* Height of the button, should be equal to width */
+  line-height: 30px; /* Centers the text vertically */
+  text-align: center; /* Centers the text horizontally */
+  padding: 0; /* No padding to affect the shape */
+  cursor: pointer;
+  display: flex; /* Using flexbox to center content */
+  justify-content: center; /* Center horizontally in the flex container */
+  align-items: center; /* Center vertically in the flex container */
+  font-size: 10px; /* Adjust as needed */
+  color: grey; /* Grey text color */
+}
+
+
+
+
