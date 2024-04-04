@@ -3,7 +3,7 @@ layout: page
 title: Cards
 ---
 
-
+{% raw %}
 <div id="app">
   <div class="search-wrapper">
     <input type="text" v-model="search" placeholder="Search cards by keywords"/>
@@ -22,4 +22,4 @@ title: Cards
   </div>
 </div>
 
-
+{% endraw %}
