@@ -4,10 +4,8 @@ layout: base
 
 <body class="page gallery">
   <div class="wrapper">
-    <header>
-      
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="{{ '/assets/js/cards-vue-app.js' | relative_url }}"></script>
+    <header>    
+
 
     </header>
     <section class="markdown-dest">
@@ -15,7 +13,7 @@ layout: base
       <br />
       <h1 class="variable">{{ page.title }}</h1>
       <div class="gallery-dest">
-        {{ content }}
+        {% raw %}{{ content }}{% endraw %}
       </div>
     </section>
     <footer>
@@ -23,4 +21,6 @@ layout: base
       <p><small>CC BY-NC-SA 4.0 &copy; AI-VIS EthiCards</small></p>
     </footer>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="{{ '/assets/js/cards-vue-app.js' | relative_url }}"></script>
 </body>
