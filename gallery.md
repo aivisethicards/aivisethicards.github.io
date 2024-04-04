@@ -3,136 +3,270 @@ layout: page
 title: Cards
 ---
 
-<div class="exhibs not-markdown-area">
-
-  <div class="single-exhib">
-    <div class="exhib-img">
-      <img src="assets/gallery/1-0.png" />
-    </div>
-    <div class="exhib-info">
-      <div class="exhib-text">
-        <h2>
-          Weighted Graph Comparison Techniques for Brain Connectivity Analysis
-        </h2>
-        <p>By Jingtao Zhou</p>
-      </div>
-      <div class="exhib-links">
-        <a
-          href="https://hal.inria.fr/hal-00780999/document"
-          class="exhib-button"
-        >
-          <i class="material-icons">menu_book</i>
-          <small>Paper</small>
-        </a>
-        <a href="/gallery/weighted.html" class="exhib-button">
-          <i class="material-icons">crop_original</i>
-          <small>Comic</small>
-        </a>
-      </div>
+<div id="app">
+  <div class="search-wrapper">
+    <input type="text" v-model="search" placeholder="Search cards by keywords"/>
+        <label>Search title:</label>
+  </div>
+  <div class="wrapper">
+    <div class="card" v-for="post in filteredList" @click="zoomIn(post)">
+      <img v-bind:src="post.img"/>
     </div>
   </div>
-
-  
-  <div class="single-exhib">
-    <div class="exhib-img">
-      <img src="assets/gallery/5-0.jpg" />
-    </div>
-    <div class="exhib-info">
-      <div class="exhib-text">
-        <h2>
-          Understanding Privacy-Related Questions on Stack Overflow
-        </h2>
-        <p>By Zezhong Wang</p>
-      </div>
-      <div class="exhib-links">
-        <a
-          href="https://www.wiki.ed.ac.uk/display/TRG/Developer-Centred+Security+and+Privacy"
-          class="exhib-button"
-        >
-          <i class="material-icons">menu_book</i>
-          <small>Paper</small>
-        </a>
-        <a href="/gallery/privacy.html" class="exhib-button">
-          <i class="material-icons">crop_original</i>
-          <small>Comic</small>
-        </a>
-      </div>
+  <div class="overlay" v-if="zoomedPost" @click.self="zoomOut()">
+    <div class="zoomedCard">
+      <img v-bind:src="zoomedPost.img"/>
+      <button class="closeButton" @click="zoomOut()">Close</button>
     </div>
   </div>
-
-  <div class="single-exhib">
-    <div class="exhib-img">
-      <img src="assets/gallery/2-0.png" />
-    </div>
-    <div class="exhib-info">
-      <div class="exhib-text">
-        <h2>A Lie Reveals the Truth</h2>
-        <p>By Benjamin Bach</p>
-      </div>
-      <div class="exhib-links">
-        <a
-          href="https://www.jacobritchie.xyz/a_lie_reveals_the_truth.pdf"
-          target="blank"
-          class="exhib-button"
-        >
-          <i class="material-icons">menu_book</i>
-          <small>Paper</small>
-        </a>
-        <a href="/gallery/lie.html" class="exhib-button">
-          <i class="material-icons">crop_original</i>
-          <small>Comic</small>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="single-exhib">
-    <div class="exhib-img">
-      <img src="assets/gallery/3-0.jpg" />
-    </div>
-    <div class="exhib-info">
-      <div class="exhib-text">
-        <h2>
-          MySong: Automatic Accompaniment Generation for Vocal Melodies
-        </h2>
-        <p>By Jingtao Zhou</p>
-      </div>
-      <div class="exhib-links">
-        <a
-          href="https://dl.acm.org/doi/10.1145/1357054.1357169"
-          class="exhib-button"
-        >
-          <i class="material-icons">menu_book</i>
-          <small>Paper</small>
-        </a>
-        <a href="/gallery/mysong.html" class="exhib-button">
-          <i class="material-icons">crop_original</i>
-          <small>Comic</small>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="single-exhib">
-    <div class="exhib-img">
-      <img src="assets/gallery/4-0.png" />
-    </div>
-    <div class="exhib-info">
-      <div class="exhib-text">
-        <h2>
-          Animation Study
-        </h2>
-        <p>By Fanny Chevalier</p>
-      </div>
-      <div class="exhib-links">
-        <a
-          class="exhib-button" style="width: 120px"
-        >
-          <i class="material-icons">event</i>
-          <small>To be released</small>
-        </a>
-      </div>
-    </div>
-  </div>
-
 </div>
+
+class Post {
+  constructor(name, img) {
+    this.name = name;
+    this.img = img;
+  }
+}
+
+const app = new Vue({
+  el: '#app',
+  data: {
+    search: '',
+    zoomedPost: null, // This will hold the post that's zoomed in
+    postList: [
+      new Post(
+        'Technology',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/tech.png'
+      ),
+       new Post(
+        'Technology mobile and web applications',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/tech%20(1).png'
+      ),
+      new Post(
+        'Technology social networds forums',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/tech%20(2).png'
+      ),
+      new Post(
+        'Technology public installations displays',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/tech%20(3).png'
+      ),
+     new Post(
+        'Technology internet of things iot',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/tech%20(4).png'
+      ),
+      new Post(
+        'Technology game',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/tech%20(6).png'
+      ),
+      new Post(
+        'Technology broadcast media',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/tech%20(7).png'
+      ),
+      new Post(
+        'Technology data repository',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/tech%20(8).png'
+      ),
+      new Post(
+        'Technology ar vr',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/tech%20(9).png'
+      ),
+      new Post(
+        'Technology others',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/tech%20(10).png'
+      ),
+      new Post(
+        'task',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/task.png'
+      ),
+      new Post(
+        'task transformation',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/task%20(1).png'
+      ),
+      new Post(
+        'task assessment',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/task%20(2).png'
+      ),
+      new Post(
+        'task comparison',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/task%20(3).png'
+      ),
+      new Post(
+        'task querying',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/task%20(4).png'
+      ),
+      new Post(
+        'task reasoning',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/task%20(5).png'
+      ),
+      new Post(
+        'task recommendation',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/task%20(6).png'
+      ),
+      new Post(
+        'task mining',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/task%20(7).png'
+      ),
+      new Post(
+        'principle',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/principle.png'
+      ),
+      new Post(
+        'principle transparency',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/principle%20(1).png'
+      ),
+      new Post(
+        'principle transparency justice and fairness',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/principle%20(2).png'
+      ),
+      new Post(
+        'principle non-maleficence',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/principle%20(3).png'
+      ),
+      new Post(
+        'principle responsibility',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/principle%20(4).png'
+      ),
+      new Post(
+        'principle privacy',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/principle%20(5).png'
+      ),
+      new Post(
+        'principle beneficence',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/principle%20(6).png'
+      ),
+      new Post(
+        'principle freedom autonomy',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/principle%20(7).png'
+      ),
+      new Post(
+        'principle trust',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/principle%20(8).png'
+      ),
+      new Post(
+        'principle sustainabiliyty',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/principle%20(9).png'
+      ),
+      new Post(
+        'principle dignity',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/principle%20(10).png'
+      ),
+      new Post(
+        'principle solodarity',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/principle%20(11).png'
+      ),
+      new Post(
+        'people',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/people.png'
+      ),
+      new Post(
+        'people age variations',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/people%20(1).png'
+      ),
+      new Post(
+        'people workers with different needs',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/people%20(2).png'
+      ),
+      new Post(
+        'people health conditions',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/people%20(3).png'
+      ),
+      new Post(
+        'people marginalized',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/people%20(4).png'
+      ),
+      new Post(
+        'people situational variations',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/people%20(5).png'
+      ),
+      new Post(
+        'non human',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/people%20(6).png'
+      ),
+      new Post(
+        'goal',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/goal.png'
+      ),
+      new Post(
+        'goal visualization generation',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/goal%20(1).png'
+      ),
+      new Post(
+        'goal visualization enhancement',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/goal%20(2).png'
+      ),
+      new Post(
+        'goal analysis',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/goal%20(3).png'
+      ),
+      new Post(
+        'challenge',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/challenge.png'
+      ),
+      new Post(
+        'challenge input guidance',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-input%20(1).png'
+      ),
+            new Post(
+        'challenge input prescriptive statistically spurious conclusions',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-input%20(2).png'
+      ),
+            new Post(
+        'challenge input abstraction approximation ML models',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-input%20(3).png'
+      ),
+            new Post(
+        'challenge input visualize algorithmic descision making',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-input%20(4).png'
+      ),
+            new Post(
+        'challenge input alternate design analytical descision',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-input%20(5).png'
+      ),
+            new Post(
+        'challenge input audit structure provenance irregularities',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-input%20(6).png'
+      ),
+            new Post(
+        'challenge input hidden uncertainty',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-input%20(7).png'
+      ),
+            new Post(
+        'challenge input visualize hidden impacts',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-input%20(8).png'
+      ),
+            new Post(
+        'challenge input visualize hidden labor',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-input%20(9).png'
+      ),
+            new Post(
+        'challenge input how much data enough',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-input%20(10).png'
+      ),
+            new Post(
+        'challenge input anthropomorphize',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-input%20(11).png'
+      ),
+            new Post(
+        'challenge input obfuscate protect privacy',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-input%20(12).png'
+      ),
+            new Post(
+        'challenge input due process',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-input%20(13).png'
+      ),
+            new Post(
+        'challenge input binaries',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-input%20(14).png'
+      ),
+            new Post(
+        'challenge input diversity process',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-input%20(15).png'
+      ),
+            new Post(
+        'challenge input examine power and empower',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-input%20(16).png'
+      ),
+            new Post(
+        'challenge input consider context',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-input%20(17).png'
+      ),
+            new Post(
+        'challenge input legitimize',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-input%20(18).png'
+      ),
+            new Post(
+        'challenge input pressure slow unethical analytical behavior',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-input%20(19).png'
+      ),
+            new Post(
+        'challenge output rethink binaries',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-output%20(1).png'
+      ),
+            new Post(
+        'challenge output pluralism',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-output%20(2).png'
+      ),
+            new Post(
+        'challenge output examine power empowerment',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-output%20(3).png'
+      ),
+            new Post(
+        'challenge output context',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-output%20(4).png'
+      ),
+            new Post(
+        'challenge output embodiment affect',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-output%20(5).png'
+      ),
+            new Post(
+        'challenge output labor visible',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/ch-output%20(6).png'
+      )
+
+]
+  },
+  computed: {
+    filteredList() {
+      return this.postList.filter(post => {
+        return post.name.toLowerCase().includes(this.search.toLowerCase());
+      });
+    }
+  },
+
+methods: {
+    zoomIn(post) {
+      this.zoomedPost = post;
+    },
+    zoomOut() {
+      this.zoomedPost = null;
+    }
+  },
+  mounted() {
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && this.zoomedPost) {
+        this.zoomOut();
+      }
+    });
+  },
+  beforeDestroy() {
+    document.removeEventListener('keydown', (e) => {
+      // You need to define the function you're removing, otherwise it won't work.
+      if (e.key === 'Escape' && this.zoomedPost) {
+        this.zoomOut();
+      }
+    });
+  }
+});
