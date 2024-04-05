@@ -232,12 +232,20 @@ methods: {
     }
   },
   mounted() {
+    console.log('Vue instance mounted, postList:', this.postList);
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && this.zoomedPost) {
         this.zoomOut();
       }
     });
   },
+  
+  methods: {
+  zoomIn(post) {
+    console.log('zoomIn called with post:', post);
+    this.zoomedPost = post;
+  },
+    
   beforeDestroy() {
     document.removeEventListener('keydown', (e) => {
       // You need to define the function you're removing, otherwise it won't work.
