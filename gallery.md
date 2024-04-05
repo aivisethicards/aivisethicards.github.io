@@ -3,6 +3,7 @@ layout: page
 title: Cards
 ---
 
+{% raw %}
 
 <div id="app">
   <div class="search-wrapper">
@@ -22,3 +23,4 @@ title: Cards
   </div>
 </div>
 
+{% endraw %}
