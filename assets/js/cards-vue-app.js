@@ -9,7 +9,7 @@ const app = new Vue({
   el: '#app',
   data: {
     search: '',
-    zoomedPost: null, // This will hold the post that's zoomed in
+    zoomedPost: null,
     postList: [
       new Post(
         'Technology',  'https://raw.githubusercontent.com/aivisethicards/aivisethicards.github.io/main/assets/img/cards/tech.png'
@@ -216,21 +216,18 @@ const app = new Vue({
 ]
   },
   computed: {
-  filteredList() {
-    return this.postList.filter(post => {
-      return post.name.toLowerCase().includes(this.search.toLowerCase());
-    });
-  }
-},
-
-
-  
-methods: {
-  handleEscape(e) {
-    if (e.key === 'Escape' && this.zoomedPost) {
-      this.zoomOut();
+    filteredList() {
+      return this.postList.filter(post => {
+        return post.name.toLowerCase().includes(this.search.toLowerCase());
+      });
     }
   },
+  methods: {
+    handleEscape(e) {
+      if (e.key === 'Escape' && this.zoomedPost) {
+        this.zoomOut();
+      }
+    },
     zoomIn(post) {
       console.log('zoomIn called with post:', post);
       this.zoomedPost = post;
@@ -239,10 +236,10 @@ methods: {
       this.zoomedPost = null;
     }
   },
-mounted() {
-  document.addEventListener('keydown', this.handleEscape);
-},
-beforeDestroy() {
-  document.removeEventListener('keydown', this.handleEscape);
-},
+  mounted() {
+    document.addEventListener('keydown', this.handleEscape);
+  },
+  beforeDestroy() {
+    document.removeEventListener('keydown', this.handleEscape);
+  }
 });
