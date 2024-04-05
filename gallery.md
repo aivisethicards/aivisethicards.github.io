@@ -11,10 +11,10 @@ title: Cards
         <label>Search title:</label>
   </div>
   <div class="card-wrapper">
-    <div class="card" v-for="post in filteredList" @click="zoomIn(post)">
-      <img v-bind:src="post.img"/>
-    </div>
+  <div class="card" v-for="post in filteredList" @click="zoomIn(post)">
+    <img v-bind:src="post.img" alt="Card image">
   </div>
+</div>
   <div class="overlay" v-if="zoomedPost" @click.self="zoomOut()">
     <div class="zoomedCard">
       <img v-bind:src="zoomedPost.img"/>
