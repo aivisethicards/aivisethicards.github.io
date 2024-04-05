@@ -216,12 +216,12 @@ const app = new Vue({
 ]
   },
   computed: {
-    filteredList() {
-      return this.postList.filter(post => {
-        return post.name.toLowerCase().includes(this.search.toLowerCase());
-      });
-    }
-  },
+  filteredList() {
+    return this.postList.filter(post => {
+      return post.name.toLowerCase().includes(this.search.toLowerCase());
+    });
+  }
+},
 
 methods: {
     zoomIn(post) {
