@@ -1,11 +1,29 @@
-import CardComponent from './assets/js/CardComponent.vue';
+Vue.component('CardComponent', {
+  template: `
+    <div class="card" @click="$emit('zoomIn', post)">
+      <div v-if="post">
+        <div v-if="post.img">
+          <img :src="post.img" alt="Card image" />
+        </div>
+        <div v-else>No image available</div>
+      </div>
+      <div v-else>No post available</div>
+    </div>
+  `,
+  props: {
+    post: {
+      type: Object,
+      required: true,
+    },
+  },
+});
 
-// class Post {
-//   constructor(name, img = '') {
-//     this.name = name;
-//     this.img = img;
-//   }
-// }
+class Post {
+  constructor(name, img = '') {
+    this.name = name;
+    this.img = img;
+  }
+}
 
 const app = new Vue({
   el: '#app',
