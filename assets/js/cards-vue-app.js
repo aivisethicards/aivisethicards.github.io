@@ -1,5 +1,5 @@
 class Post {
-  constructor(name, img) {
+  constructor(name, img = '') {
     this.name = name;
     this.img = img;
   }
