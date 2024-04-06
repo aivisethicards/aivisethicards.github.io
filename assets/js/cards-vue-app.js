@@ -258,6 +258,8 @@ const app = new Vue({
     }
   },
   mounted() {
+    // Log the postList to the console
+    console.log(this.postList);
     document.addEventListener('keydown', this.handleEscape);
   },
   beforeDestroy() {
