@@ -4,32 +4,26 @@ title: Cards
 ---
 
 {% raw %}
-
 <div id="app">
   <div class="search-wrapper">
-    <input type="text" v-model="search" placeholder="Search cards by keywords" />
+    <input type="text" v-model="search" placeholder="Search cards by keywords"/>
     <label>Search title:</label>
   </div>
   <div class="card-wrapper">
+    <!-- Ensure you are using the right component name as registered in Vue -->
     <card-component
       v-for="post in filteredList"
       :key="post.name"
       :post="post"
-      @zoomIn="zoomIn"
-    />
+      @zoom-in="zoomIn"
+    ></card-component>
   </div>
   <div class="overlay" v-if="zoomedPost" @click.self="zoomOut()">
-    <div class="zoomedCard">
-      <div v-if="zoomedPost">
-        <div v-if="zoomedPost.img">
-          <img :src="zoomedPost.img" />
-        </div>
-        <div v-else>No image available</div>
-      </div>
-      <div v-else>No post available</div>
-      <button class="closeButton" @click="zoomOut()">Close</button>
+    <div class="zoomed-card">
+      <!-- Conditional rendering based on the zoomedPost -->
+      <img v-if="zoomedPost" :src="zoomedPost.img" alt="Zoomed card image"/>
+      <button class="close-button" @click="zoomOut()">Close</button>
     </div>
   </div>
 </div>
-
 {% endraw %}
