@@ -12,13 +12,17 @@ title: Cards
   </div>
   <div class="card-wrapper">
     <div class="card" v-for="post in filteredList" @click="zoomIn(post)">
-      <img v-if="post.img" :src="post.img" alt="Card image">
+      <div v-if="post.img">
+        <img :src="post.img" alt="Card image">
+      </div>
       <div v-else>No image available</div>
     </div>
   </div>
   <div class="overlay" v-if="zoomedPost" @click.self="zoomOut()">
     <div class="zoomedCard">
-      <img v-if="zoomedPost.img" :src="zoomedPost.img"/>
+      <div v-if="zoomedPost.img">
+        <img :src="zoomedPost.img"/>
+      </div>
       <div v-else>No image available</div>
       <button class="closeButton" @click="zoomOut()">Close</button>
     </div>
