@@ -21,11 +21,10 @@
       @zoom-in="zoomIn"
     ></card-component>
   </div>
-  <div class="overlay" v-if="zoomedPost" @click.self="zoomOut()">
-    <div class="zoomed-card">
-      <!-- Conditional rendering based on the zoomedPost -->
-      <img v-if="zoomedPost" :src="zoomedPost.img" alt="Zoomed card image"/>
-      <button class="close-button" @click="zoomOut()">Close</button>
+ <div class="overlay" v-if="zoomedPost" @click.self="zoomOut()">
+    <div class="zoomedCard">
+      <img v-bind:src="zoomedPost.img"/>
+      <button class="closeButton" @click="zoomOut()">Close</button>
     </div>
   </div>
 
