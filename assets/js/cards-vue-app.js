@@ -12,6 +12,9 @@ Vue.component('CardComponent', {
       required: true
     },
   },
+    created() {
+    console.log('CardComponent is created');
+  }
 });
 
 console.log('CardComponent registered successfully');
