@@ -2,22 +2,18 @@
 Vue.component('CardComponent', {
   template: `
     <div class="card" @click="$emit('zoomIn', post)">
-      <div v-if="post">
-        <div v-if="post.img">
-          <img :src="post.img" alt="Card image" />
-        </div>
-        <div v-else>No image available</div>
-      </div>
-      <div v-else>No post available</div>
+      <img v-if="post && post.img" :src="post.img" alt="Card image" />
+      <div v-else>No image available</div>
     </div>
   `,
   props: {
     post: {
       type: Object,
-      required: true,
+      required: true
     },
   },
 });
+
 
 class Post {
   constructor(name, img = '') {
