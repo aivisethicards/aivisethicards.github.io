@@ -1,32 +1,16 @@
-// cards-vue-app.js
-Vue.component('CardComponent', {
+// Global component registration
+Vue.component('card-component', {
   template: `
-    <div class="card" @click="$emit('zoomIn', post)">
-      <img v-if="post && post.img" :src="post.img" alt="Card image" />
+    <div class="card" @click="$emit('zoom-in', post)">
+      <img v-if="post.img" :src="post.img" alt="Card image"/>
       <div v-else>No image available</div>
     </div>
   `,
-  props: {
-    post: {
-      type: Object,
-      required: true
-    },
-  },
-    created() {
-    console.log('CardComponent is created');
-  }
+  props: ['post']
 });
 
-console.log('CardComponent registered successfully');
-
-class Post {
-  constructor(name, img = '') {
-    this.name = name;
-    this.img = img;
-  }
-}
-
-const app = new Vue({
+// Vue instance
+new Vue({
   el: '#app',
   data: {
     search: '',
@@ -244,28 +228,11 @@ const app = new Vue({
     }
   },
   methods: {
-    handleEscape(e) {
-      if (e.key === 'Escape' && this.zoomedPost) {
-        this.zoomOut();
-      }
-    },
     zoomIn(post) {
-      console.log('zoomIn called with post:', post);
       this.zoomedPost = post;
     },
     zoomOut() {
       this.zoomedPost = null;
     }
-  },
-  mounted() {
-console.log('Vue instance mounted');
-  // Log the postList to see if data is there
-  console.log(this.postList);
-
-    
-    document.addEventListener('keydown', this.handleEscape);
-  },
-  beforeDestroy() {
-    document.removeEventListener('keydown', this.handleEscape);
   }
 });
