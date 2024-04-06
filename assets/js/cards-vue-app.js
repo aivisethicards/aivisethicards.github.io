@@ -1,3 +1,4 @@
+// Register the CardComponent globally
 Vue.component('CardComponent', {
   template: `
     <div class="card" @click="$emit('zoomIn', post)">
@@ -27,9 +28,6 @@ class Post {
 
 const app = new Vue({
   el: '#app',
-  components: {
-    CardComponent,
-  },
   data: {
     search: '',
     zoomedPost: null,
