@@ -1,4 +1,12 @@
-// Global component registration
+// First, define the Post class so it's available globally
+class Post {
+  constructor(name, img) {
+    this.name = name;
+    this.img = img;
+  }
+}
+
+// Then, register the card-component globally before creating the Vue instance
 Vue.component('card-component', {
   template: `
     <div class="card" @click="$emit('zoom-in', post)">
