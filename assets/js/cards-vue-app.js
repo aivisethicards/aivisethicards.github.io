@@ -1,4 +1,4 @@
-// Register the CardComponent globally
+// cards-vue-app.js
 Vue.component('CardComponent', {
   template: `
     <div class="card" @click="$emit('zoomIn', post)">
