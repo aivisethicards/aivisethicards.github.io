@@ -1,12 +1,17 @@
-class Post {
-  constructor(name, img = '') {
-    this.name = name;
-    this.img = img;
-  }
-}
+import CardComponent from './assets/js/CardComponent.vue';
+
+// class Post {
+//   constructor(name, img = '') {
+//     this.name = name;
+//     this.img = img;
+//   }
+// }
 
 const app = new Vue({
   el: '#app',
+  components: {
+    CardComponent,
+  },
   data: {
     search: '',
     zoomedPost: null,
