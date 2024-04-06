@@ -14,6 +14,7 @@ Vue.component('CardComponent', {
   },
 });
 
+console.log('CardComponent registered successfully');
 
 class Post {
   constructor(name, img = '') {
