@@ -255,8 +255,11 @@ const app = new Vue({
     }
   },
   mounted() {
-    // Log the postList to the console
-    console.log(this.postList);
+console.log('Vue instance mounted');
+  // Log the postList to see if data is there
+  console.log(this.postList);
+
+    
     document.addEventListener('keydown', this.handleEscape);
   },
   beforeDestroy() {
