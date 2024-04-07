@@ -359,7 +359,7 @@ body.showcase {
 .cbc-inner {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* Allow .home-cards to grow as needed */
   overflow: visible;
 }
 
