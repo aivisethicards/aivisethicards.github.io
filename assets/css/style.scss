@@ -405,7 +405,7 @@ body.showcase {
 @media screen and (max-width: 920px) {
   .home-cards {
     top: 130px; /* Adjusts the image down so it doesn't overlap with the title/navigation */
-    transform: translate(-10%, 0%); /* Center the element */ /* Centers it horizontally */
+    transform: translate(-20%, 0%); 
     /* Keep background-size the same as outside the media query for consistency */
     background-size: contain; /* Adjust if necessary based on the appearance */
     min-width: 600px; /* Minimum width of the container */
