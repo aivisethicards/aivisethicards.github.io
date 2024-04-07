@@ -365,7 +365,7 @@ body.showcase {
 }
 
 .home-cards {
-  background-size: 110%; /* Ensures the entire image is shown */
+  background-size: 100%; /* Ensures the entire image is shown */
   background-position: center; /* Centers the image within the container */
   background-repeat: no-repeat;
   width: 100vw; /* 100% of the viewport width */
@@ -403,7 +403,7 @@ body.showcase {
 @media screen and (max-width: 920px) {
   .home-cards {
     top: 120px; /* Adjusts the image down so it doesn't overlap with the title/navigation */
-    // transform: translateX(-50%); /* Centers it horizontally */
+    transform: translate(0%, 0%); /* Center the element */ /* Centers it horizontally */
     /* Keep background-size the same as outside the media query for consistency */
     background-size: contain; /* Adjust if necessary based on the appearance */
   }
