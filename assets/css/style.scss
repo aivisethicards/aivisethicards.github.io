@@ -365,7 +365,7 @@ body.showcase {
 }
 
 .home-cards {
-  background-size: contain; /* Ensures the entire image is shown */
+  background-size: 130%; /* Ensures the entire image is shown */
   background-position: center; /* Centers the image within the container */
   background-repeat: no-repeat;
   width: 100vw; /* 100% of the viewport width */
@@ -373,7 +373,7 @@ body.showcase {
   position: absolute; 
   // left: 50%;
   // top: 50%;
-  transform: translate(0%, 0%); /* Center the element */
+  transform: translate(20%, 0%); /* Center the element */
   overflow: visible; /* Allow the image to be visible outside the container */
 }
 
