@@ -371,8 +371,8 @@ body.showcase {
   width: 100vw; /* 100% of the viewport width */
   min-height: 60vh; /* Adjust this to prevent clipping at the bottom */
   position: absolute; 
-  left: 50%;
-  top: 50%;
+  left: 0%;
+  top: 0%;
   transform: translate(-50%, -50%); /* Center the element */
   overflow: visible; /* Allow the image to be visible outside the container */
 }
