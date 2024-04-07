@@ -202,6 +202,15 @@ footer {
     width: auto;
     margin: 0;
   }
+  .home-cards {
+    /* Ensure the top value is large enough to push the image below the title and navigation */
+    top: 120px; /* Adjust this value based on the actual height of your title and navigation */
+    /* Keep the transform property to center horizontally and adjust for the new top value */
+    transform: translateX(-50%);
+    /* You might also want to adjust the background-size if it's too large */
+    background-size: 110%; /* Adjust this value as needed */
+  }
+
 
   header,
   section,
