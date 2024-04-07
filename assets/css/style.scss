@@ -292,7 +292,7 @@ body.showcase {
   margin: 0;
   padding: 0;
   background-image: url("../img/noise.png");
-}
+
 
   * {
     box-sizing: border-box;
@@ -401,10 +401,10 @@ body.showcase {
 
 @media screen and (max-width: 920px) {
   .home-cards {
-    top: 120px; /* This moves the image down from the top edge of its nearest positioned ancestor */
-    transform: translateX(-50%); /* Adjusting this will help center the element correctly */
-    /* You may also want to adjust the background size if the image is too large */
-    background-size: cover; /* or 'contain' depending on your need */
+    top: 120px; /* Adjusts the image down so it doesn't overlap with the title/navigation */
+    transform: translateX(-50%); /* Centers it horizontally */
+    /* Keep background-size the same as outside the media query for consistency */
+    background-size: contain; /* Adjust if necessary based on the appearance */
   }
 
   .left-sidebar-content {
