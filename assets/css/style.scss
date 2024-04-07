@@ -365,16 +365,15 @@ body.showcase {
 }
 
 .home-cards {
-  background-size: contain; /* This will ensure the whole image is always visible */
-  background-position: center; /* Center the image within the container */
-  background-repeat: no-repeat;
-  width: 100vw; /* 100% of the viewport width */
-  min-height: 50vh; /* Set a minimum height for the .home-cards to ensure it doesn't get too small */
+  background-size: contain; /* Will show the whole image, but might not cover the entire element */
+  background-position: center; /* Centers the image within the container */
+  width: 100vw;
+  min-height: 50vh; /* Might need to adjust if the image appears too small */
   position: absolute; 
-  left: 50%; /* Center horizontally */
-  top: 50%; /* Center vertically */
-  transform: translate(-50%, -50%); /* Center the element */
-  overflow: visible; /* Make sure any oversized content is not clipped */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: visible;
 }
 
 .container {
