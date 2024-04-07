@@ -3,10 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+    <title>Gallery - AI-VIS EthiCards</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/base.css">
+
 </head>
-<body>
+
+<body class="page">
+    <div class="wrapper">
+        <!-- Header -->
+        <header>
+            <h1 class="sc-head">
+                <a href="/"> AI-VIS<br>EthiCards<br> </a>
+                <span class="page-title">Gallery</span>
+            </h1>
+            <!-- Navigation -->
+            <div class="navigation">
+                <a class="single-nav" href="/gallery.html">Cards</a>
+                <!-- <a class="single-nav" href="/workshop.html">Workshop</a> -->
+                <a class="single-nav" href="/guidelines.html">Use Guide</a>
+                <a class="single-nav" href="/publication.html">Publications</a>
+                <a class="single-nav" href="/people.html">About Us</a>
+            </div>
+        </header>
+
+        <!-- Vue App Root -->
+        <section class="markdown-dest">
 <div id="app">
   <div class="search-wrapper">
     <input type="text" v-model="search" placeholder="Search cards by keywords"/>
@@ -27,6 +49,13 @@
       <button class="closeButton" @click="zoomOut()">Close</button>
     </div>
   </div>
+</section>
+
+<!-- Footer -->
+        <footer>
+            <p><small>CC BY-NC-SA 4.0 &copy; AI-VIS EthiCards</small></p>
+        </footer>
+    </div>
 
     <!-- Include Vue.js -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
