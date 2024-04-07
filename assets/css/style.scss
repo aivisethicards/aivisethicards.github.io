@@ -400,8 +400,8 @@ body.showcase {
 
 @media screen and (max-width: 920px) {
   .home-cards {
-    top: 20%; /* This moves the image down from the top edge of its nearest positioned ancestor */
-    transform: translate(-50%, -50%); /* Adjusting this will help center the element correctly */
+    top: 120px; /* This moves the image down from the top edge of its nearest positioned ancestor */
+    transform: translateX(-50%); /* Adjusting this will help center the element correctly */
     /* You may also want to adjust the background size if the image is too large */
     background-size: cover; /* or 'contain' depending on your need */
   }
