@@ -6,8 +6,9 @@ title: Use Guide
 <!-- prettier-ignore-start -->
 
 <div class="note">
-    <a href="/AI-VIS-EthiCards.zip" download="AI-VIS-EthiCards.zip">Click to download the full card set.</a>
+    <p><a href="https://forms.gle/5ZrJsZbpEGVwrVLCA" target="_blank">Access the ready-to-print full card set</a>.</p>
 </div>
+
 
 # Activities with AI-VIS EthiCards
 
