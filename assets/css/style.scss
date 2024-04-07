@@ -312,7 +312,7 @@ body.showcase {
     top: 0;
     left: 0;
     padding: 60px; /* Adjust the padding to your preference */
-    // justify-content: flex-start;
+    justify-content: flex-start;
 }
 
   .logos {
@@ -496,14 +496,14 @@ body.page {
  ================ CARDS STYLES
 */
 
-html, body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
+// html, body {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   flex-direction: column;
+//   margin-top: 16px;
+//   margin-bottom: 16px;
+// }
 
 #app {
   display: flex;
