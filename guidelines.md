@@ -6,7 +6,7 @@ title: Use Guide
 <!-- prettier-ignore-start -->
 
 <div class="note">
-    <p><a href="https://forms.gle/5ZrJsZbpEGVwrVLCA" target="_blank">Access the ready-to-print full card set</a>.</p>
+    <a href="https://forms.gle/5ZrJsZbpEGVwrVLCA" target="_blank">Access the ready-to-print full card set</a>.
 </div>
 
 
