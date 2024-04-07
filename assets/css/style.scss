@@ -365,17 +365,18 @@ body.showcase {
 }
 
 .home-cards {
-    background-size: 138%; /* or use a specific size, like '120%' to make it larger than its container */
-   background-position: center right; 
+    background-size: 120%; /* Will show the whole image, but might not cover the entire element */
+    background-position: center; /* Centers the image within the container */
    background-repeat: no-repeat;
     width: 100vw; /* 100% of the viewport width */
     height: auto; /* 100% of the viewport height, you can also adjust this as needed */
     position: absolute; 
-    right: 0; /* Align to the right, you can add some pixels or percentages to move it to the left */
-    top: 0%; /* Centered vertically */
-    left: 50%;
-   transform: translate(-20%, -3%); /* Offset the container by half its width and height to truly center it */
+   min-height: 50vh; /* Might need to adjust if the image appears too small */
+  left: 50%;
+  top: 50%;
+    transform: translate(-50%, -50%); /* Offset the container by half its width and height to truly center it */
     overflow: visible; /* Make sure any oversized content is not clipped */
+
 }
 
 .container {
