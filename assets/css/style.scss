@@ -399,10 +399,14 @@ body.showcase {
 
 
   @media print, screen and (max-width: 920px) {
+    .home-cards {
+    top: 20%; /* Adjust the percentage as needed to lower the background image */
+    transform: translate(-50%, 0%); /* Adjust the translate to shift the image downwards */
+  }
     .left-sidebar-content {
       padding: 40px;
     }
-
+ }
 
 
 /*
