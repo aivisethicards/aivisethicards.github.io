@@ -3,7 +3,7 @@ layout: page
 title: Publications
 ---
 
-<a href="/chi24k-sub7266-cam-i48.pdf" target="_blank"><strong>Card-Based Approach to Engage Exploring Ethics in AI for Data Visualization</strong></a>
+<a href="/chi24k-sub7266-cam-i48.pdf" target="_blank" style="font-size: 20px; font-weight: bold;">Card-Based Approach to Engage Exploring Ethics in AI for Data Visualization</a>
 
 Zezhong Wang, Shan Hao, Sheelagh Carpendale, *Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA '24), May 11--16, 2024, Honolulu, HI, USA*. **[https://dl.acm.org/doi/10.1145/3613905.3650972](https://dl.acm.org/doi/10.1145/3613905.3650972)**
 
