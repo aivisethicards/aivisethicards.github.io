@@ -6,7 +6,7 @@ title: Use Guide
 <!-- prettier-ignore-start -->
 
 <div class="note">
-    <a href="https://github.com/aivisethicards/aivisethicards.github.io/blob/cbedafdfc650c665b195cce90a95e89b25adae2a/EthiCards_print_13Dec-2.pdf" target="_blank">Access the ready-to-print full card set</a>.
+    <a href="EthiCards_print_13Dec-2.pdf" target="_blank">Access the ready-to-print full card set</a>.
 </div>
 
 
