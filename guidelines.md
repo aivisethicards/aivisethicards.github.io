@@ -6,7 +6,7 @@ title: Use Guide
 <!-- prettier-ignore-start -->
 
 <div class="note">
-    <a href="EthiCards_print_13Dec-2.pdf" target="_blank">Access the ready-to-print full card set</a>.
+    <a href="25-10-card-print.pdf" target="_blank">Access the ready-to-print full card set</a>.
 </div>
 
 
