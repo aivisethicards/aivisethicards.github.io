@@ -10,7 +10,7 @@ title: Use Guide
 </div>
 
 
-# Activities with AI4VS EthiCards
+# Activities with AI4VIS EthiCards
 
 [![](assets/img/Visual-Instructions/AI-VIS-EthiCards-Activity-instruction-16Dec-01.png)](assets/img/Visual-Instructions/AI-VIS-EthiCards-Activity-instruction-16Dec.pdf)
 
